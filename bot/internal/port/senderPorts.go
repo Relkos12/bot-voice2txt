@@ -1,10 +1,8 @@
 package port
 
-import "os"
-
 //FileSender is port for sending file
 type FileSender interface {
-	SendFile(chatID int64, file *os.File) error
+	SendFile(chatID int64, path string) error
 }
 
 //MessageSender is port for sending message

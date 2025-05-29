@@ -17,7 +17,7 @@ func NewFileService(fs port.FileSender) *FileService {
 // SendFile send a file to user
 func (fs *FileService) SendFile(chatID int64, file entity.ConvertedText) error {
 	//sending a file
-	if err := fs.fileSender.SendFile(chatID, file.File); err != nil {
+	if err := fs.fileSender.SendFile(chatID, file.FilePath); err != nil {
 		return err
 	}
 	return nil
