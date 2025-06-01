@@ -6,14 +6,13 @@ import (
 	"os"
 )
 
-// BOT_TOKEN_ENV is environment variable
-const BOT_TOKEN_ENV = "BOT_TOKEN"
-
 type Config struct {
 	Token string
 }
 
 func LoadConfig(Logger *slog.Logger) (*Config, error) {
+
+	const BOT_TOKEN_ENV = "BOT_TOKEN"
 
 	botToken := os.Getenv(BOT_TOKEN_ENV)
 
